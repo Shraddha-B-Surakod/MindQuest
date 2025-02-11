@@ -1,0 +1,66 @@
+:root {
+    --primary-color: #6366f1;
+    --secondary-color: #9d98f3;
+    --background-color: #0f172a;
+    --text-color: #e2e8f0;
+    --card-background: #1e293b;
+    --hover-bg: #4f46e5;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    text-align: center;
+    padding: 50px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Header */
+h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/* Game Links */
+.game-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.game-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 60px;
+    background-color: var(--card-background);
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 12px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.game-links a:hover {
+    background-color: var(--hover-bg);
+    transform: translateY(-5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .game-links {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .game-links a {
+        width: 100%;
+    }
+}
