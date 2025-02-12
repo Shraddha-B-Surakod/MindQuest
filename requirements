@@ -1,0 +1,10 @@
+Flask
+Flask-SocketIO
+flask-cors
+gunicorn
+numpy
+pandas  # If used for sentiment analysis
+scikit-learn  # If used for mood analysis
+tensorflow  # If used for AI-based activities
+mysql-connector-python  # If using MySQL
+TextBlob

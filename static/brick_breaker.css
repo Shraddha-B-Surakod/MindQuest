@@ -1,0 +1,69 @@
+:root {
+    --primary-color: #6366f1;
+    --secondary-color: #4f46e5;
+    --background-color: #1e293b;
+    --text-color: #e2e8f0;
+    --button-primary: #4CAF50;
+    --button-secondary: #FF5733;
+    --button-hover-primary: #45a049;
+    --button-hover-secondary: #e04e2f;
+    --canvas-border: #334155;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Title styling */
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* Description text */
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Center the canvas */
+canvas {
+    display: block;
+    margin: 20px auto;
+    border: 3px solid var(--canvas-border);
+    background-color: #2d3748;
+}
+
+/* Buttons styling */
+button {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 24px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--button-primary);
+    color: white;
+}
+
+button:hover {
+    background-color: var(--button-hover-primary);
+}
+
+/* Reset button */
+#resetGame {
+    background-color: var(--button-secondary);
+}
+
+#resetGame:hover {
+    background-color: var(--button-hover-secondary);
+}
