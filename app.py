@@ -4,6 +4,7 @@ import mysql.connector
 from werkzeug.security import generate_password_hash, check_password_hash
 import random
 from utils.sentiment_analysis import analyze_sentiment  # Import analysis function
+import os
 
 app = Flask(__name__)
 app.secret_key = "your_secret_key"  # Required for session handling
@@ -292,4 +293,5 @@ def breathing():
 
 
 if __name__ == '__main__':
-    socketio.run(app, debug=True)
+    port = int(os.environ.get("PORT", 5000))  # Get Render’s port, default to 5000
+    socketio.run(app, host="0.0.0.0", port=port, debug=True)
