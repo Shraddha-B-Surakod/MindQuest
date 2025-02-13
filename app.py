@@ -14,11 +14,11 @@ socketio = SocketIO(app)
 
 # Connect to MySQL
 db = mysql.connector.connect(
-    host="localhost",  
-    user="root",
-    password="shraddha8",
-    database="mindquest_db"
-    
+    host=os.getenv("CC_DB_HOST", "bx9pbqtk7oxvdamytoui-mysql.services.clever-cloud.com"),
+    user=os.getenv("CC_DB_USER", "uydax389vx8ors82"),
+    password=os.getenv("CC_DB_PASS", "6GiFSkjsFihi7BkwdWaq"),
+    database=os.getenv("CC_DB_NAME", "bx9pbqtk7oxvdamytoui"),
+    port=os.getenv("CC_DB_PORT", "3306")
 )
 cursor = db.cursor()
 
